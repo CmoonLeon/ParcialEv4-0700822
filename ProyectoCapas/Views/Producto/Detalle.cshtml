@@ -1,0 +1,8 @@
+﻿@model ProyectoCapas.DAL.Usuario
+
+<h1>Detalle del producto</h1>
+<p>Nombre: @Model.Nombre</p>
+<p>Precio: @Model.Precio</p>
+<p>Stock: @Model.Stock</p>
+<p>Detalle: @Model.Detalle</p>
+<a href="@Url.Action("Index", "Producto")" class="btn btn-primary">Regresar al listado</a>

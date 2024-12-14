@@ -1,0 +1,34 @@
+﻿@model List<ProyectoCapas.DAL.Usuario>
+
+@{
+    ViewData["Title"] = "Productos Disponibles";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Detalle</th>
+            <th>Acción</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var producto in Model){
+            <tr>
+                <td>@producto.Id</td>
+                <td>@producto.Nombre</td>
+                <td>@producto.Precio</td>
+                <td>@producto.Stock</td>
+                <td>@producto.Detalle</td>
+                <td>
+                    <a href="/Producto/Detalle/@producto.Id" class="btn btn-info">Ver Detalle</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
